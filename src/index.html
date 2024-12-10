@@ -19,8 +19,9 @@
             <p class="quiz__description">Test your knowledge by answerng a series of fun questions!</p>
             <button class="quiz__button quiz__button--start">Start Quiz</button>
         </section>
-         <!----------------------------------------- Quiz Screen ------------------------------------------------->
-         <section class="quiz__section quiz__section--questions quiz__section--hidden">
+
+        <!----------------------------------------- Quiz Screen ------------------------------------------------->
+        <section class="quiz__section quiz__section--questions quiz__section--hidden">
             <div class="quiz__progress">
                 <p class="quiz__progress-text">Quesion 1 of 8</p>
                 <div class="quiz__progress-bar">
@@ -39,14 +40,33 @@
             <button class="quiz__button quiz__button--next quiz__button--hidden">Next</button>
         </section>
 
-          <!-----------------------------------------Result Screen -------------------------------------------------------->
-          <section class="quiz__section quiz__section--result quiz__section--hidden">
+        <!-----------------------------------------Result Screen -------------------------------------------------------->
+        <section class="quiz__section quiz__section--result quiz__section--hidden">
             <h2 class="quiz__title">Quiz Complete!</h2>
             <p class="quiz__score-text">Your Score: <span class="quiz__score">0</span>/8</p>
             <button class="quiz__button quiz__button--review">Revieve Answers</button>
             <button class="quiz__button quiz__button--restart">Restart Quiz</button>
         </section>
-           <!---------------------------------------- Review Screen -------------------------------------------------------->
-           <section class="quiz__section quiz__section--review quiz__section--hidden">
+
+        <!---------------------------------------- Review Screen -------------------------------------------------------->
+        <section class="quiz__section quiz__section--review quiz__section--hidden">
             <h2 class="quiz__title">Review Your Answers</h2>
             <div class="quiz__review">
+                <!----------------- Dynamisk innhold blir lagt til her med JS -------------------------------------------->
+                <!----------------- Eksempel på hvordan innholdet kan se ut ---------------------------------------------->
+                <div class="quiz__review-item">
+                    <p class="quiz__review-question">1. What is 5 + 3?</p>
+                    <p class="quiz__review-answer quiz__review-answer--correct">Correct Answer: 8</p>
+                    <p class="quiz__review-answer quiz__review-answer--user">Your Answer: 7</p>
+                </div>
+            </div>
+            <button class="quiz__button quiz__button--restart">Restart Quiz</button>
+        </section>
+        
+    </main>
+    <footer class="page__footer">
+        <p class="page__footer-text">&copy; 2024 Quiz App</p>
+    </footer>
+
+</body>
+</html>
