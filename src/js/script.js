@@ -30,6 +30,7 @@ const questions = [
     { question: "50 + 30?", options: ["70", "80", "90", "100"], correct: "80" },
     { question: "100 - 25?", options: ["50", "75", "25", "100"], correct: "75" },
 ];
+
 // Start Quiz
 startButton.addEventListener('click', () => {
     startScreen.style.display = "none";
@@ -77,3 +78,28 @@ function showResults() {
     resultScreen.style.display = "block";
     scoreElement.textContent = `${score} out of ${questions.length}`;
 }
+
+// Show Review
+reviewButton.addEventListener('click', () => {
+    resultScreen.style.display = "none";
+    reviewScreen.style.display = "block";
+    reviewContainer.innerHTML = "";
+
+    questions.forEach((question, index) => {
+        const reviewItem = document.createElement("div");
+        reviewItem.innerHTML = `
+            <p>${index + 1}. ${question.question}</p>
+            <p>Correct Answer: ${question.correct}</p>
+            <p>Your Answer: ${userAnswers[index] || "No answer"}</p>
+        `;
+        reviewItem.style.color = userAnswers[index] === question.correct ? "green" : "red";
+        reviewContainer.appendChild(reviewItem);
+    });
+});
+
+// Restart Quiz
+restartButtons.forEach(button => button.addEventListener('click', () => {
+    reviewScreen.style.display = "none";
+    resultScreen.style.display = "none";
+    startScreen.style.display = "block";
+}));
