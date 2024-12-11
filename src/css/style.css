@@ -81,3 +81,47 @@ body {
     width: 0%; 
     transition: width 0.3s ease;
 }
+
+/*------------------------------------ Questions and Answers--------------------------------------------- */
+.quiz__question-container {
+    margin-top: 20px;
+}
+
+.quiz__question {
+    font-size: var(--font-size-question);
+    margin-bottom: 15px;
+}
+
+.quiz__answers button {
+    display: block;
+    background-color: #f1f1f1;
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quiz__answers button:hover {
+    background-color: var(--secondary-color);
+}
+
+
+.quiz__button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: var(--font-size-base);
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.quiz__button:hover {
+    background-color: var(--primary-color-hover);
+}
