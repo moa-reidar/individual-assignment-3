@@ -125,3 +125,28 @@ body {
 .quiz__button:hover {
     background-color: var(--primary-color-hover);
 }
+
+/* -----------------------------------Review Section------------------------------------------------ */
+.quiz__review {
+    text-align: left;
+}
+
+.quiz__review-item {
+    margin-bottom: 15px;
+}
+
+.quiz__review-question {
+    font-weight: bold;
+}
+
+.quiz__review-answer {
+    margin-left: 10px;
+}
+
+.quiz__review-answer--correct {
+    color: var(--success-color);
+}
+
+.quiz__review-answer--user {
+    color: var(--error-color);
+}
