@@ -53,3 +53,27 @@ function showQuestion() {
         button.onclick = () => selectAnswer(button.textContent);
     });
 }
+
+// Select Answer
+function selectAnswer(selected) {
+    const currentQuestion = questions[currentQuestionIndex];
+    userAnswers.push(selected);
+
+    if (selected === currentQuestion.correct) {
+        score++;
+    }
+
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showResults();
+    }
+}
+
+// Show Results
+function showResults() {
+    quizScreen.style.display = "none";
+    resultScreen.style.display = "block";
+    scoreElement.textContent = `${score} out of ${questions.length}`;
+}
