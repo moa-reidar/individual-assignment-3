@@ -30,3 +30,26 @@ const questions = [
     { question: "50 + 30?", options: ["70", "80", "90", "100"], correct: "80" },
     { question: "100 - 25?", options: ["50", "75", "25", "100"], correct: "75" },
 ];
+// Start Quiz
+startButton.addEventListener('click', () => {
+    startScreen.style.display = "none";
+    quizScreen.style.display = "block";
+    currentQuestionIndex = 0;
+    score = 0;
+    userAnswers = [];
+    showQuestion();
+});
+
+// Show Question
+function showQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+    progressText.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+    progressBarFill.style.width = `${((currentQuestionIndex + 1) / questions.length) * 100}%`;
+
+    // Update Answer Buttons
+    answerButtons.forEach((button, index) => {
+        button.textContent = currentQuestion.options[index];
+        button.onclick = () => selectAnswer(button.textContent);
+    });
+}
