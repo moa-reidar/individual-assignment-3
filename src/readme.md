@@ -1,3 +1,8 @@
+
+link github: https://github.com/moa-reidar/individual-assignment-3.git
+
+link netlify: https://675a2dc660b1836712c8640d--moonlit-bonbon-684af7.netlify.app/
+
 Project Overview
 Planning and Structure
 
